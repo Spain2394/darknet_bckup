@@ -1,5 +1,4 @@
-Darknet compatible with CUDA 10 and OpenCV4
-NVIDIA Jetson TX2 running Jetpack 4.3 [L4T 32.3.1]
+Darknet compatible with CUDA 10 and OpenCV4 on NVIDIA Jetson TX2 running Jetpack 4.3 [L4T 32.3.1]
 
 ![Darknet Logo](http://pjreddie.com/media/files/darknet-black-small.png)
 # Darknet #
