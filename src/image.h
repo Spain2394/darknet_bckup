@@ -10,7 +10,7 @@
 #include "darknet.h"
 
 #ifdef OPENCV
-#include <opencv2/core.hpp>
+#include </usr/local/include/opencv4/opencv2/core/core.hpp>
 void *open_video_stream(const char *f, int c, int w, int h, int fps);
 image get_image_from_stream(void *p);
 image load_image_cv(char *filename, int channels);

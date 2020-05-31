@@ -4,7 +4,7 @@ OPENCV=1
 OPENMP=0
 DEBUG=0
 
-
+# jetson tx2
 ARCH= -gencode arch=compute_53,code=[sm_53,compute_53] \
       -gencode arch=compute_62,code=[sm_62,compute_62]
 #      -gencode arch=compute_20,code=[sm_20,sm_21] \ This one is deprecated?
@@ -25,7 +25,7 @@ AR=ar
 ARFLAGS=rcs
 OPTS=-Ofast
 LDFLAGS= -lm -pthread 
-COMMON= -Iinclude/ -Isrc/ -I/usr/include/opencv4/opencv2/
+COMMON= -Iinclude/ -Isrc/
 CFLAGS=-Wall -Wno-unused-result -Wno-unknown-pragmas -fPIC -fpermissive
 
 ifeq ($(OPENMP), 1) 
@@ -41,8 +41,8 @@ CFLAGS+=$(OPTS)
 ifeq ($(OPENCV), 1) 
 COMMON+= -DOPENCV
 CFLAGS+= -DOPENCV
-LDFLAGS+= `pkg-config --libs opencv` -lstdc++
-COMMON+= `pkg-config --cflags opencv` 
+LDFLAGS+= `pkg-config --libs opencv4` -lstdc++
+COMMON+= `pkg-config --cflags opencv4` 
 endif
 
 ifeq ($(GPU), 1) 
