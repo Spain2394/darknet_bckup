@@ -86,6 +86,25 @@ image mat_to_image(Mat m)
     return im;
 }
 
+image* mat_to_image(Mat m, image* im)
+{
+    // m.type() assumed to be CV8UCX, 0 <= X < 3
+    int h = m.rows;
+    int w = m.cols;
+    int c = m.channels();
+    unsigned char *data = (unsigned char *)m.data;
+    int step = m.step;
+
+    for(int i = 0; i < h; ++i){
+        for(int k= 0; k < c; ++k){
+            for(int j = 0; j < w; ++j){
+                im->data[k*w*h + i*w + j] = data[i*step + j*c + k]/255.;
+            }
+        }
+    }
+    return im;
+}
+
 void *open_video_stream(const char *f, int c, int w, int h, int fps)
 {
     VideoCapture *cap;
