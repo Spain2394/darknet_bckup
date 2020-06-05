@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/nvidia/Workspace/darknet_opencv4/devel/setup.sh

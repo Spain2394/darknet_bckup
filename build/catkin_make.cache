@@ -1,0 +1,2 @@
+
+-DCATKIN_DEVEL_PREFIX=/home/nvidia/Workspace/darknet_opencv4/devel -DCMAKE_INSTALL_PREFIX=/home/nvidia/Workspace/darknet_opencv4/install -G Unix Makefiles
