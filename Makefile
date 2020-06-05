@@ -4,9 +4,8 @@ OPENCV=1
 OPENMP=0
 DEBUG=0
 
-# jetson tx2
-ARCH= -gencode arch=compute_53,code=[sm_53,compute_53] \
-      -gencode arch=compute_62,code=[sm_62,compute_62]
+# Jetson Tx2
+ARCH= -gencode arch=compute_62,code=[sm_62,compute_62]
 #      -gencode arch=compute_20,code=[sm_20,sm_21] \ This one is deprecated?
 
 # This is what I use, uncomment if you know your arch and want to specify
